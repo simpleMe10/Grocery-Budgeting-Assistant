@@ -1,0 +1,603 @@
+@font-face {
+    font-family: 'Brasika';
+    src: url(font/brasika.ttf);
+  }
+  
+  @font-face {
+    font-family: 'LivvicR';
+    src: url(font/Livvic-Regular.ttf);
+  }
+  @font-face {
+    font-family: 'LivvicB';
+    src: url(font/Livvic-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: "Sergio";
+    src: url(font/Sergio\ Trendy.ttf);
+  }
+  
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #f4eed6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'LivvicR';
+}
+.welcome{
+    
+    margin-right: 110px;
+    
+}
+.front-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Brasika';
+  font-size: 2em;
+  z-index: 9999;
+    color:#FFFFFF;
+}
+
+/*BUDGET CARD BOX*/
+.input-wrapper input {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 13em;
+    border-radius: 1rem;
+    color: 9EE3B4;
+    box-shadow: 0 0.4rem #574940;
+    cursor: pointer;
+  }
+  
+  .input-wrapper input:focus {
+    outline-color: 372C2E;
+  }
+
+/*TOP-CLASS*/
+.container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.container .card{
+    position: relative;
+    cursor: pointer;
+    
+    
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+    
+}
+
+.container .card .face.face1{
+    position: relative;
+    background: #c7ab95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+
+.container .card:hover .face.face1{
+    background: #c3b091;
+    transform: translateY(0);
+    
+}
+
+.container .card .face.face1 .content{
+    opacity: 1;
+    transition: 0.5s;
+    
+    
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+    
+}
+
+.container .card .face.face1 .content img{
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+    
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+    
+    
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+    
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+    margin-left: 100px;
+    margin-right: auto;
+}
+
+.container .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+    
+}
+
+/*MID-RANGE*/
+
+
+.container .card2{
+    position: relative;
+    cursor: pointer;
+    
+    
+    
+    
+}
+
+.container .card2 .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+    
+}
+
+.container .card2 .face.face1{
+    position: relative;
+    background: #c7ab95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+
+.container .card2:hover .face.face1{
+    background: #c3b091;
+    transform: translateY(0);
+     border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.container .card2 .face.face1 .content{
+    opacity: 1;
+    transition: 0.5s;
+    
+    
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+    
+}
+
+.container .card2 .face.face1 .content img{
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+    
+}
+
+.container .card2 .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+
+.container .card2 .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+    
+    
+}
+
+.container .card2:hover .face.face2{
+    transform: translateY(0);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+.container .card2 .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container .card2 .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+    margin-left: 100px;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.container .card2 .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+    
+}
+
+/*TOP-CLASS*/
+
+.container .card3{
+    position: relative;
+    cursor: pointer;
+    
+    
+    
+    
+}
+
+.container .card3 .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+    
+}
+
+.container .card3 .face.face1{
+    position: relative;
+    background: #c7ab95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    
+}
+
+
+.container .card3:hover .face.face1{
+    background: #c3b091;
+    transform: translateY(0);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.container .card3 .face.face1 .content{
+    opacity: 1;
+    transition: 0.5s;
+    
+    
+}
+
+.container .card3:hover .face.face1 .content{
+    opacity: 1;
+    
+}
+
+.container .card3 .face.face1 .content img{
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+    
+}
+
+.container .card3 .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+
+.container .card3 .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+    
+    
+}
+
+.container .card3:hover .face.face2{
+    transform: translateY(0);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.container .card3 .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container .card3 .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+    margin-left: 100px;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.container .card3 .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+    
+}
+
+/*LOW-BUDGET*/
+
+.container .card5{
+    position: relative;
+    cursor: pointer;
+
+}
+
+.container .card5 .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+    
+}
+
+.container .card5 .face.face1{
+    position: relative;
+    background: #c7ab95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+
+.container .card5:hover .face.face1{
+    background: #c3b091;
+    transform: translateY(0);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.container .card5 .face.face1 .content{
+    opacity: 1;
+    transition: 0.5s;
+    
+    
+}
+
+.container .card5:hover .face.face1 .content{
+    opacity: 1;
+    
+}
+
+.container .card4 .face.face1 .content img{
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+    
+}
+
+.container .card5 .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+
+.container .card5 .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+    
+    
+}
+
+.container .card5:hover .face.face2{
+    transform: translateY(0);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+.container .card5 .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container .card5 .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+    margin-left: 100px;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.container .card5 .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+    
+}
+
+
+/*BUDGET CARD*/
+.container{
+    position: relative;
+    cursor: pointer;
+    
+    
+    
+    
+}
+
+.container .card1 .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+    border-radius: 20px;
+    
+}
+
+.container .card1 .face.face1{
+    position: fixed;
+    background: #c7ab91;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding-bottom: 150px;
+    transform: translateY(-100px);
+    margin-left: 50px;
+    margin-right: auto;
+}
+
+
+.sidebar-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+  }
+  
+.sidebar-popup.active {
+    visibility: visible;
+    opacity: 1;
+}
+  
+.sidebar {
+    background: #c7ab91;
+    width: auto;
+    height: 600px;
+    transition: 0.5s;
+    border-radius: 20px;
+    margin-right: 150px;
+    align-items: center;
+    overflow-y: auto;
+}
+  
+.sidebar h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .item-name {
+    flex-grow: 1;
+    margin-right: 20px; /* Add right margin for spacing */
+  }
+  
+  
+  
+  
+
+
+
+
+  

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Greyt Grocery Budgeting Assistant</title>
+  <link rel="stylesheet" href="shop.css">
+    <style>
+.custom-shape-divider-top-1686114840 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1686114840 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 141px;
+    
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1686114840 .shape-fill {
+    fill: #372C2E;
+}
+
+    </style>
+</head>
+<body>
+     
+  <header class="welcome ">
+      
+    <h1 style="font-family: 'Brasika'; color: black; position: absolute; letter-spacing: 4px; display:block;
+    text-align: center; background-color:#c7ab91; border-radius: 20px; padding: 20px;
+    margin-top: -300px; position: absolute;text-align: center" class="front-text">
+          Greyt Grocery Budgeting Assistant
+      </h1>
+       <div class="custom-shape-divider-top-1686114840" style="margin-top: -5px;">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+</div>
+    <!-- BUDGET CARD -->
+    <div class="container" style="margin-top: -85px;margin-bottom: 200px;margin-right: -650px;margin-top: 50px">
+      <div class="card1">
+        <div class="face face1" id="budgetCard">
+          <div class="content" style="margin-top: 150px">
+            <center>
+              <img width="89" height=89" src="https://img.icons8.com/glyph-neue/64/budget.png" alt="budget" />
+              <h3 style="font-family: 'Sergio'; letter-spacing: 2px; font-size: 30px;">BUDGET</h3>
+                
+           
+    
+<div class="input-wrapper">
+  <input type="text" name="text" id="BUDGET" value="&#x20B1;" oninput="handleInput(this)" style="margin-top: 50px; ">
+</div>
+                
+            </center>
+          </div>
+        </div>
+          
+      </div>
+    </div>
+    <div class="wave"></div>
+  </header>
+    
+<!-- TOP-CLASS -->
+  <div class="container" style="background:#372C2E; padding: 20px; border-radius: 20px">
+     <table style="font-family: 'Brasika';position: absolute;margin-left:400px;margin-top: 400px ">
+    <tr>
+            <th></th>
+            <th></th>
+ 
+    </tr>
+        <tr>
+            <td><center><h1 style="font-family: 'Sergio';font-size: 20px; margin-left: 45px;color: #372C2E"> 
+          PRIORITY </h1></center></td>
+          <td ><img width="28" height="28" style="margin-top: 5px"src="https://img.icons8.com/color/48/verified-account--v1.png" alt="verified-account--v1"/></td>
+       
+        </tr>
+
+  </table>
+    <div class="card3">
+      <div class="face face1">
+        <div class="content">
+          <img width="96" height="96" src="https://img.icons8.com/material-sharp/96/shopping-basket-star.png" alt="shopping-basket-star" style="margin-left: 20px" />
+          <h3 style="font-family: 'LivvicB'; ">TOP-CLASS</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p>Indulge in the epitome of luxury with our premium, high-quality products that exude elegance and sophistication.</p>
+          <br><center><p><b>Price: &#x20B1 80+</b></p></center>
+          <a href="Top-menu.html"id="copyLink">Pick</a>
+        </div>
+      </div>
+    </div>
+      
+    <!-- MID-RANGE -->
+    <div class="card2">
+      <div class="face face1">
+        <div class="content">
+          <img width="96" height="96" src="https://img.icons8.com/pastel-glyph/64/shopping-basket-2--v1.png" alt="shopping-basket-2--v1" style="margin-left: 20px" />
+          <h3 style="font-family:'LivvicB';">MID-RANGE</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p>Discover a perfect balance of affordability and quality with our range of reliable products that offer great value for money.</p>
+          <br><center><p><b>Price: &#x20B1 40 - &#x20B1 79.99</b></p></center>
+          <a href="Top-menu.html" id="copyLink2">Pick</a>
+        </div>
+      </div>
+    </div>
+    <!-- LOW-BUDGET -->
+    <div class="card5">
+      <div class="face face1">
+        <div class="content">
+          <img width="96" height="96" src="https://img.icons8.com/ios-filled/100/wicker-basket--v1.png" alt="wicker-basket--v1" style="margin-left: 20px"/>
+          <h3 style="font-family: 'LivvicB';">LOW-BUDGET</h3>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <p>Shop smart and save with our budget-friendly products that deliver practicality and affordability without compromising on functionality.</p>
+          <br><center><p><b>Price: &#x20B1 0 - &#x20B1 39.99</b></p></center>
+          <a href="Top-menu.html" id="copyLink3">Pick</a>
+        </div>
+      </div>
+    </div>
+      
+  </div>
+
+<script>
+  const input = document.getElementById('BUDGET');
+  
+  const cardFaceTP = document.querySelector('.container .card3 .face.face1');
+  const cardFaceMR = document.querySelector('.container .card2 .face.face1');
+  const cardFaceLB = document.querySelector('.container .card5 .face.face1');
+  input.addEventListener('input', handleInput);
+
+  function handleInput() {
+    let currentValue = input.value;
+
+    // Remove non-digit characters except the peso sign
+    currentValue = currentValue.replace(/[^\d₱]/g, '');
+
+    // Remove leading peso sign
+    currentValue = currentValue.replace(/^\₱/, '');
+
+    // Convert to integer if not empty
+    const budget = currentValue ? parseInt(currentValue) : 0;
+
+    // Add commas every third digit (from right to left) and prepend peso sign
+    currentValue = '₱' + budget.toLocaleString();
+
+    input.value = currentValue;
+
+    if (budget >= 10000) {
+      cardFaceTP.style.backgroundColor = '#9EE3B4';
+      cardFaceMR.style.backgroundColor = '#9EE3B4';
+      cardFaceLB.style.backgroundColor = '#9EE3B4';
+    } else if (budget >= 5000 && budget < 10000) {
+      cardFaceTP.style.backgroundColor = '#EF5350';
+      cardFaceMR.style.backgroundColor = '#9EE3B4';
+      cardFaceLB.style.backgroundColor = '#9EE3B4';
+      cardFaceMR.style.color = 'red';
+    } else if (budget > 0 && budget < 5000) {
+      cardFaceTP.style.backgroundColor = '#EF5350';
+      cardFaceMR.style.backgroundColor = '#EF5350';
+      cardFaceLB.style.backgroundColor = '#9EE3B4';
+      cardFaceMR.style.color = 'red';
+    } else {
+      cardFaceTP.style.backgroundColor = '';
+      cardFaceMR.style.backgroundColor = '';
+      cardFaceLB.style.backgroundColor = '';
+    }
+      // Copy Budget
+
+  // Add event listener to the link Top-Class
+  document.getElementById('copyLink').addEventListener('click', function(event) {
+    // Prevent the default link behavior
+    event.preventDefault();
+
+    // Get the value of the input
+    var inputValue = document.getElementById('BUDGET').value;
+
+    // Remove the peso sign and convert to integer
+    var budgetValue = parseInt(inputValue.replace(/[^0-9.-]+/g, ''));
+
+    // Store the value in local storage
+    localStorage.setItem('copiedInputValue', budgetValue);
+
+    // Navigate to the target HTML file
+    window.location.href = event.target.href;
+  });
+
+  // Reset the copied input value when returning to index.html
+  window.addEventListener('pageshow', function(event) {
+    // Check if the copied input value exists
+    var copiedInputValue = localStorage.getItem('copiedInputValue');
+    if (copiedInputValue) {
+      // Clear the copied input value from local storage
+      localStorage.removeItem('copiedInputValue');
+    }
+  });
+
+  // Add event listener to the link for Mid-Range
+  document.getElementById('copyLink2').addEventListener('click', function(event) {
+    // Prevent the default link behavior
+    event.preventDefault();
+
+    // Get the value of the input
+    var inputValue = document.getElementById('BUDGET').value;
+
+    // Remove the peso sign and convert to integer
+    var budgetValue = parseInt(inputValue.replace(/[^0-9.-]+/g, ''));
+
+    // Store the value in local storage
+    localStorage.setItem('copiedInputValue', budgetValue);
+
+    // Navigate to the target HTML file
+    window.location.href = event.target.href;
+  });
+
+  // Reset the copied input value when returning to index.html
+  window.addEventListener('pageshow', function(event) {
+    // Check if the copied input value exists
+    var copiedInputValue = localStorage.getItem('copiedInputValue');
+    if (copiedInputValue) {
+      // Clear the copied input value from local storage
+      localStorage.removeItem('copiedInputValue');
+    }
+  });
+
+  // Add event listener to the link for Low Budget
+  document.getElementById('copyLink3').addEventListener('click', function(event) {
+    // Prevent the default link behavior
+    event.preventDefault();
+
+    // Get the value of the input
+    var inputValue = document.getElementById('BUDGET').value;
+
+    // Remove the peso sign and convert to integer
+    var budgetValue = parseInt(inputValue.replace(/[^0-9.-]+/g, ''));
+
+    // Store the value in local storage
+    localStorage.setItem('copiedInputValue', budgetValue);
+
+    // Navigate to the target HTML file
+    window.location.href = event.target.href;
+  });
+
+  // Reset the copied input value when returning to index.html
+  window.addEventListener('pageshow', function(event) {
+    // Check if the copied input value exists
+    var copiedInputValue = localStorage.getItem('copiedInputValue');
+    if (copiedInputValue) {
+      // Clear the copied input value from local storage
+      localStorage.removeItem('copiedInputValue');
+    }
+  });
+  }
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,3185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Greyt Grocery Budgeting Assistant</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<style>
+  @font-face {
+    font-family: "Brasika";
+    src: url(font/brasika.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "LivvicR";
+    src: url(font/Livvic-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "LivvicB";
+    src: url(font/Livvic-SemiBold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Sergio";
+    src: url(font/Sergio\ Trendy.ttf) format("truetype");
+  }
+
+</style>
+  
+
+<body>
+  <header class="welcome">
+      
+      
+    <h1 style="position: absolute; letter-spacing: 4px; display:block; margin-top: -2850px; margin-left: 605px;
+    text-align: center; font-family: 'Brasika'; color: black;
+    background-color:#c7ab91; border-radius: 20px; padding: 20px;"class="front-text" id="NAME">
+        Greyt Grocery Budgeting Assistant
+    </h1>
+  </header>
+    
+    <!-- FOOTER -->
+<div class="custom-shape-divider-top-1686114840" style="margin-top: -5px;">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+</div>
+    
+<div class="budgetCol">  
+        <!-- BUDGET CARD --><br><br><br>
+    <div class="container budget" >
+      <div class="card1">
+        <div class="face face1" id="budgetCard">
+          <div class="content" style="margin-top: -140px">
+            <center>
+              <img width="96" height="96" src="https://img.icons8.com/glyph-neue/64/budget.png" alt="budget" style="margin-top: 250px;" />
+              <h3 style="font-family: 'Sergio'; letter-spacing: 2px; font-size: 40px;">BUDGET</h3>
+           
+               <p id="budgetValue"> </p>
+               <p id="budgetChange"></p>
+               <br><br><br>
+               <button onclick="showTopClass()" id="TOPB"class="buttDes">TOP-CLASS</button><br><br>
+               <button onclick="showTopClass1()" id="TOPB"class="buttDes">MID-RANGE</button><br><br>
+               <button onclick="showTopClass2()" id="TOPB"class="buttDes">LOW-BUDGET</button><br><br>
+               <button onclick="showALL()" id="ALLB"class="buttDes">ALL</button><br><br><br><br>
+                <p id="currentDateTime" style=" margin-left: 12px; position: relative"></p>
+            </center> 
+          </div>
+        </div>
+          
+      </div>
+    </div>
+    </div>
+
+      <!-- SIDEBAR
+  <div class="sidebar" style="background: #c7ab91; background-size: contain ;width: 350px; height: 945px; transition: 0.5s; border-radius: 20px; margin-top: 60px; margin-right:70px; position: fixed; align-items: center; ">
+    <h3 style="text-align: center;" >Items</h3>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quantity</h3>
+    <ul id="itemList"></ul>
+  </div>
+</div> -->
+     
+<!--1st Column-->    
+<div class="firstCol" style="margin-top: 150px; margin-left: 30px">  
+ <div class="card card_box">
+        <div class="image">
+            <img width="100%" height="100%" src="https://www.momandme.nestle.com.ph/sites/default/files/content_image/nan_optipro_three_1.3kg_angled_1.png" style="border-radius: 20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Nan Optipro 3 (12-36 months) 1.3kg </p>
+                <p class="function ">
+                    MILK
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 1081.50
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+     <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+        
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R1Q" oninput="handleInput1(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+     
+   
+
+    </div>
+    
+     <div class="card card_box">
+        <div class="image"><img width="80%" height="120%" style="margin-top: -15px;margin-left: 20px" src="../product pic/swiss.png" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Swiss Miss Creamy Choco Mallows
+                     260g              </p>
+                <p class="function ">
+                      CHOCOLATE DRINKS
+                </p>    
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 	148.50
+                         
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R4Q" oninput="handleInput4(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+     
+     </div>
+   
+
+    </div>
+    
+     <div class="card card_box">
+        <div class="image">
+            <img width="100%" height="130%" src="https://mygroceryph.com/pub/media/catalog/product/cache/942fb7ebd8f124d7d8ad39312cbc983a/s/p/spam_luncheon_meat_regular_12oz.png" style="border-radius: 20px; margin-top: -20px;" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Spam Luncheon Meat 12oz 340g</p>
+                <p class="function ">
+                  LUNCHEON MEAT
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 200.00
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+     <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+        
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R10Q" oninput="handleInput10(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+     
+   
+
+    </div>
+    
+     <div class="card card_box">
+        <div class="image">
+            <img width="100%" height="120%" src="https://mypharma.imgix.net/assets/site/johnsonbabybathmilkrice200ml.png?auto=compress%2Cformat&crop=focalpoint&domain=mypharma.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&h=1200&ixlib=php-3.3.1&usm=20&w=1200&s=645784ad9c5aed97fdf6020c5f44f15a" style="border-radius: 20px;margin-top: -20px;" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Johnson's Bath Milk R 500ml</p>
+                <p class="function ">
+                    BABY BATH
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 293.50
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+     <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+        
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R11Q" oninput="handleInput11(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+     
+   
+
+    </div>
+    
+    <div id="quantity-form-container"></div>
+    
+ <div class="card card_box2">
+        <div class="image"><img width="100%" height="121%" src="https://www.srssulit.com/wp-content/uploads/products/3495-1.png" style="border-radius: 20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Bioderm Soap WHT 135g              </p>
+                <p class="function ">
+                    SOAP
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                    <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 40.00
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+       
+     </div>
+     
+   
+    <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R2Q" oninput="handleInput2(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+   
+
+    </div>
+    
+     <div class="card card_box2">
+        <div class="image"><img width="100%" height="120%" src="https://www.srssulit.com/wp-content/uploads/products/5043-1.png" style="border-radius: 20px;margin-top: -20px;" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                   Green Cross Alcohol 250ml       </p>
+                <p class="function ">
+                    ALCOHOL
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                    <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 52.00
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+       
+     </div>
+     
+   
+    <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R12Q" oninput="handleInput12(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+   
+
+    </div>
+    
+    
+     <div class="card card_box2">
+        <div class="image"><img width="100%" height="130%" src="https://mygroceryph.com/pub/media/catalog/product/cache/942fb7ebd8f124d7d8ad39312cbc983a/p/h/ph_care_feminine_wash_cool_wind_50ml.png" style="border-radius: 20px; margin-top: -20px;" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    PH Care C/W 50ml             </p>
+                    <p class="function ">
+                      FEMININE WASH
+                   </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                    <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 53.00 
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+       
+     </div>
+     
+   
+    <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R13Q" oninput="handleInput13(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+   
+
+    </div>
+    
+    
+     <div class="card card_box2">
+        <div class="image"><img width="90%" height="100%" src="../product pic/superstick.png" style="border-radius: 20px;margin-top: -2px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Superstix Chocolate Junior 330g   </p>
+                <p class="function ">
+                  WAFER STICKS
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                    <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 73.00
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+       
+     </div>
+     
+   
+    <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R14Q" oninput="handleInput14(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+   
+
+    </div>
+    
+    
+ <div class="card card_box3">
+        <div class="image"><img width="100%" height="120%" src="../product pic/haw.png" style="border-radius: 20px; margin-top: -5px;" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name" style="margin-top: 30px;">
+                     Haw Haw Milk Candy (40PCS)     </p>
+                <p class="function ">
+                  CANDY
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 31.00
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+        
+     </div>
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R3Q" oninput="handleInput3(this)" style="padding: 10px">
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+
+
+    </div>
+    
+        
+ <div class="card card_box3">
+        <div class="image"><img width="100%" height="150%" src="https://dcfood.id/wp-content/uploads/2020/12/Pocary-sweat-350ml.png" style="border-radius: 20px;margin-top: -30px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name" style="margin-top: 30px;">
+                  Pocari Sweat 350ml </p>
+                <p class="function ">
+                    DRINKS
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                          
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 35.00
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+        
+     </div>
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R15Q" oninput="handleInput15(this)" style="padding: 10px">
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+
+
+    </div>
+    
+        
+ <div class="card card_box3">
+        <div class="image"><img width="100%" height="140%" src="../product pic/BES.png" style="border-radius: 20px;margin-top: -40px;" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name" style="margin-top: 30px;">
+                     Best Food's Sandwich Spread 80ml</p>
+                <p class="function ">
+                    SPREAD
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 27.00
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+        
+     </div>
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R16Q" oninput="handleInput16(this)" style="padding: 10px">
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+
+
+    </div>
+    
+        
+ <div class="card card_box3">
+        <div class="image"><img width="90%" height="120%" src="../product pic/master.png" style="border-radius: 20px;margin-top: -20px; margin-left: 10px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name" style="margin-top: 30px;">
+                  Master Sardines Red In Tomato Saunce 155g     </p>
+                <p class="function ">
+                    SARDINES
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 22.75 
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+        
+     </div>
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R17Q" oninput="handleInput17(this)" style="padding: 10px">
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+
+
+    </div>
+    </div>
+<!--2nd Column-->    
+    <div class="secondCol" style="margin-top: 150px;">  
+ <div class="card card_box">
+        <div class="image"><img width="80%" height="120%" src="https://www.rosepharmacy.com/ph1/wp-content/uploads/2016/09/67930.png" style="border-radius: 20px;margin-left: 20px;margin-top: -5px;" alt="budget"/></div>
+        
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                   Lactum (6-12 months) Plain
+                   350G              </p>
+                <p class="function ">
+                    MILK
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 255.00 
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R18Q" oninput="handleInput18(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+     
+     </div>
+   
+
+    </div>
+        
+ <div class="card card_box">
+        <div class="image"><img width="100%" height="140%" src="../product pic/chuckie.png" style="border-radius:20px; margin-right: 60px; margin-top: -30px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Nestle Chuckie Baon Saver's Pack
+                  110ml x 10            </p>
+                <p class="function ">
+                    CHOCOLATE DRINKS
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 84.25
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R19Q" oninput="handleInput19(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+     
+     </div>
+   
+
+    </div>
+
+ <div class="card card_box">
+        <div class="image"><img width="90%" height="120%" style="margin-top: -20px;"src="https://www.tulipfood.ph/media/208937/tulip-plm-340g-138914-1.png?anchor=center&mode=crop&width=640&height=640&rnd=133141891970000000" style="border-radius: 20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Tulip Pork Lunch Meat 340g              </p>
+                <p class="function ">
+                  LUNCHEON MEAT
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 108.00 
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R20Q" oninput="handleInput20(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+     
+     </div>
+   
+
+    </div>
+        
+         <div class="card card_box">
+        <div class="image"><img width="80%" height="95%" style="margin-top: -5px; margin-left: 20px;" src="../product pic/baby.png" style="border-radius: 20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Baby Dove Hair to Toe Wash Refill Sensitive moisture 
+                  220ml              </p>
+                <p class="function ">
+                    BABY BATH
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 218.50
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R21Q" oninput="handleInput21(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+     
+     </div>
+   
+
+    </div>
+
+
+    <!--MID RANGE PART-->  
+ <div class="card card_box2">
+        <div class="image"><img width="100%" height="120%" src="https://i5.walmartimages.com/asr/e4aa0312-5df0-4508-bfe8-de9aa46bc877_2.5b2e0d61be86ee37efbdc593121b3b6f.png?odnHeight=768&odnWidth=768&odnBg=FFFFFF" style="border-radius: 20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Irish Spring Deodorant Soap (Original) 3.07oz</p>
+                <p class="function ">
+                    SOAP
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 66.00
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+        
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R5Q" oninput="handleInput5(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+  
+
+    </div>
+        
+         <div class="card card_box2">
+        <div class="image"><img width="100%" height="150%" src="../product pic/alcoplus.png" style="margin-top: -55px; border-radius: 20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Alcoplus Alcohol 70% Solution Isopropyl
+                  250ml </p>
+                <p class="function ">
+                    ALCOHOL
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 50.75
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+        
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R22Q" oninput="handleInput22(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+  
+
+    </div>
+        
+         <div class="card card_box2">
+        <div class="image"><img width="95%" height="140%" src="../product pic/lactacyd.png" style="margin-top: -40px; border-radius: 20px;margin-right: 30px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Lactacyd Feminine Wash Odor Block
+                  60ml</p>
+                <p class="function ">
+                   FEMININE WASH
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 74.60
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+        
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R23Q" oninput="handleInput23(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+  
+
+    </div>
+        
+         <div class="card card_box2">
+        <div class="image"><img width="100%" height="120%" src="https://www.srssulit.com/wp-content/uploads/products/2004858860-1.png" style="border-radius: 20px; margin-top: -20px;" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Wafertime Rich Cream (10PCS)</p>
+                <p class="function ">
+                    WAFER
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 61.00
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+        
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R24Q" oninput="handleInput24(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+  
+
+    </div>
+    
+        
+        <!--LOW PART-->  
+ <div class="card card_box3">
+        <div class="image"><img width="95%" height="100%" src="../product pic/CHAM.png" style="border-radius: 20px; margin-left: 10px;" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Champi Candy Choco (50PCS)               </p>
+                <p class="function ">
+                    CANDY
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 36.05
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+     
+     </div>
+     
+      <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R6Q" oninput="handleInput6(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+       
+     </div>
+   
+
+    </div>
+        
+         <div class="card card_box3">
+        <div class="image"><img width="80%" height="120%" src="../product pic/ABSO.png" style="border-radius: 20px;margin-left: 20px;margin-top: -20px;" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                   Absolute Pure Distilled Drinking Water 1L            </p>
+                <p class="function ">
+                    DRINKS
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 24.65 
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+     
+     </div>
+     
+      <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R25Q" oninput="handleInput25(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+       
+     </div>
+   
+
+    </div>
+        
+        
+         <div class="card card_box3">
+        <div class="image"><img width="90%" height="150%" src="../product pic/CHEEZ.png" style="border-radius: 20px;margin-left: 20px;margin-top: -45px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    Cheez Whiz Spread Mild Pouch 60g           </p>
+                <p class="function ">
+                    SPREAD
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 33.00 
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+     
+     </div>
+     
+      <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R26Q" oninput="handleInput26(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+       
+     </div>
+   
+
+    </div>
+        
+        
+         <div class="card card_box3">
+        <div class="image"><img width="70%" height="115%" src="../product pic/mega.png" style="border-radius: 20px;margin-top: -20px; margin-left: 35px;" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                  Mega Sardines In Tomato Sauce 155g          </p>
+                <p class="function ">
+                  SARDINES
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 22.50
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+     
+     </div>
+     
+      <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R27Q" oninput="handleInput27(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+       
+     </div>
+   
+
+    </div>
+        
+        
+</div>
+    
+    <!--3rd Column-->
+<div class="thirdCol" style="margin-top: 150px;">  
+    <div class="card card_box">
+        <div class="image"><img width="100%" height="130%" src="../product pic/enfa'.png" style="border-radius: 10px;margin-right: 100px; margin-top: -20px;" alt="budget"/></div>
+        
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name" style="font-size: 20px;">
+                    Enfamil A+ Nura Pro 350g               </p>
+                <p class="function ">
+                      MILK
+                </p>
+                
+            </div>
+            <div class="stats "style="margin-top: -20px">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 677.75 
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+         <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+    <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R7Q" oninput="handleInput7(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+    </div>
+    
+    <div class="card card_box">
+        <div class="image"><img width="80%" height="100%" src="https://www.nestleprofessional.com.sg/sites/default/files/styles/np_product_detail/public/2022-04/milor_1.2kg_pouch_hcl.png?itok=nHyakRzu" style="border-radius: 20px;margin-left: 30px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name" style="font-size: 20px;">
+                    Milo 1.2kg           </p>
+                <p class="function ">
+                      CHOCOLATE DRINKS
+                </p>
+                
+            </div>
+            <div class="stats "style="margin-top: -20px">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 288.75  
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+         <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+    <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R28Q" oninput="handleInput28(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+    </div>
+    
+    
+
+ <div class="card card_box">
+        <div class="image"><img width="90%" height="120%" src="https://cdn.shopify.com/s/files/1/0277/8182/4573/products/75_512x512.png?v=1620047101" style="border-radius: 20px; margin-left: 10px;" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                    CDO Luncheon Meat Chinese Style
+                  350g             </p>
+                <p class="function ">
+                    LUNCHEON MEAT
+                </p>  
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 85.35
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R29Q" oninput="handleInput29(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+     
+     </div>
+   
+
+    </div>
+
+ <div class="card card_box">
+        <div class="image"><img width="90%" height="130%" style="margin-top:-35px;" src="../product pic/babyflo.png" style="border-radius: 20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                  BabyFlo Oatmeal Bath 200ml            </p>
+                <p class="function ">
+                    BABY BATH
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 99.50 
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R30Q" oninput="handleInput30(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+     
+     </div>
+   
+
+    </div>
+
+
+    
+ <div class="card card_box2">
+        <div class="image"><img width="100%" height="120%" src="../product pic/safe.png" style="border-radius: 20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+Safeguard Bar Soap Arctic Fresh 
+115g</p>
+                <p class="function ">
+                    SOAP
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 46.00 
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+         
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R8Q" oninput="handleInput8(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+  
+    </div>
+    
+        
+ <div class="card card_box2">
+        <div class="image"><img width="90%" height="140%" src="../product pic/casino.png" style="margin-top: -40px; border-radius: 20px;margin-left: 20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+Casino Active Alcohol Ethyl
+250ml</p>
+                <p class="function ">
+                    ALCOHOL
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 50.25
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+         
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R31Q" oninput="handleInput31(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+  
+    </div>
+    
+     
+    
+     <div class="card card_box2">
+        <div class="image"><img width="80%" height="120%" src="../product pic/batadine.png" style="margin-top: -20px; border-radius: 20px; margin-left: 25px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+Betadine Feminine Wash 7.5 Solution Antiseptic
+25ml</p>
+                <p class="function ">
+                    FEMININE WASH
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 71.05
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+         
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R32Q" oninput="handleInput32(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+  
+    </div>
+    
+        
+     <div class="card card_box2">
+        <div class="image"><img width="90%" height="140%" src="https://imartgrocersph.com/wp-content/uploads/2020/09/Frootees-Strawberry-Shortcakes-10_s.png" style="border-radius: 20px;margin-left: 10px;margin-top: -20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+Frootees Strawberry (10PCS)</p>
+                <p class="function ">
+                    BISCUIT
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                        &#x20B1 51.00
+                        <span class="state-value">
+                            
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+         
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R33Q" oninput="handleInput33(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+        
+     </div>
+  
+    </div>
+    
+    
+    
+    
+ <div class="card card_box3">
+        <div class="image"><img width="100%" height="120%" style="margin-top: -20px;" src="../product pic/FRES.png" style="border-radius: 20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                   Fres Candy Barley Mint 3g (50pcs)        </p>
+                <p class="function ">
+                    CANDY
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                       &#x20B1 35.50 
+                        <span class="state-value">
+                        
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R9Q" oninput="handleInput9(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+      
+     </div>
+ 
+
+    </div>
+    
+        
+ <div class="card card_box3">
+        <div class="image"><img width="90%" height="110%" style="margin-top: -15px;" src="../product pic/NATURE.png" style="border-radius: 20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                   Nature Spring Distilled Drinking Water 1L        </p>
+                <p class="function ">
+                    DRINKS
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                       &#x20B1 20.00
+                        <span class="state-value">
+                        
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R34Q" oninput="handleInput34(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+      
+     </div>
+ 
+
+    </div>
+    
+        
+ <div class="card card_box3">
+        <div class="image"><img width="80%" height="120%" src="https://fishersupermarket.ph/wp-content/uploads/2020/09/LAD104.png" style="border-radius: 20px; margin-left: 20px;margin-top: -20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                   Lady's Choice Ham 80ml        </p>
+                <p class="function ">
+                   SPREAD
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                       &#x20B1 33.00 
+                        <span class="state-value">
+                        
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R35Q" oninput="handleInput35(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+      
+     </div>
+     </div>
+ 
+    
+ <div class="card card_box3">
+        <div class="image"><img width="90%" height="120%" style="margin-top: -30px;"src="https://lahatditoph.s3.ap-east-1.amazonaws.com/uploads/all/tPhQFgf6Ge4bn3FTBt1LUfmEe6R9mRM4wMRcaku3.png" style="border-radius: 20px" alt="budget"/></div>
+        <div class="infos ">
+        <div class="info">
+            <div>
+                <p class="name">
+                   555 Spanish Sardines 155g        </p>
+                <p class="function ">
+                   
+                </p>
+            </div>
+            <div class="stats ">
+                    <p class="flex flex-col">
+                        Price
+                        <span class="state-value ">
+                            
+                        </span>
+                    </p>
+                    <p class="flex" id="price" style="margin-left: 120px">
+                       &#x20B1 31.50  
+                        <span class="state-value">
+                        
+                        </span>
+                    </p>
+                    
+            </div>
+        </div>
+    </div>
+      <!--PROD QUANTITY-->  
+     <div class="firstCol" style="margin-left: 90px">
+      
+     </div>
+     
+     <div class="secondCold" style="margin-left: 35px;margin-top: 50px;"> <div class="inputBox">
+  <input  type="number" value="0" id="C1R36Q" oninput="handleInput36(this)" style="padding: 10px">
+  
+</div>
+     </div>
+     
+     <div class="thirdCol">
+      
+     </div>
+ 
+
+    </div>
+    
+
+    
+</div>
+<script>
+const input1 = document.getElementById('C1R1Q');
+const input2 = document.getElementById('C1R2Q');
+const input3 = document.getElementById('C1R3Q');
+const input4 = document.getElementById('C1R4Q');
+const input5 = document.getElementById('C1R5Q');
+const input6 = document.getElementById('C1R6Q');
+const input7 = document.getElementById('C1R7Q');
+const input8 = document.getElementById('C1R8Q');
+const input9 = document.getElementById('C1R9Q');
+const input10 = document.getElementById('C1R10Q');  
+const input11 = document.getElementById('C1R11Q');  
+const input12 = document.getElementById('C1R12Q');  
+const input13 = document.getElementById('C1R13Q');
+const input14 = document.getElementById('C1R14Q');  
+const input15 = document.getElementById('C1R15Q');  
+const input16 = document.getElementById('C1R16Q');  
+const input17 = document.getElementById('C1R17Q');  
+const input18 = document.getElementById('C1R18Q');  
+const input19 = document.getElementById('C1R19Q');  
+const input20 = document.getElementById('C1R20Q');  
+const input21 = document.getElementById('C1R21Q');  
+const input22 = document.getElementById('C1R22Q');  
+const input23 = document.getElementById('C1R23Q');  
+const input24 = document.getElementById('C1R24Q');  
+const input25 = document.getElementById('C1R25Q');  
+const input26 = document.getElementById('C1R26Q');  
+const input27 = document.getElementById('C1R27Q');  
+const input28 = document.getElementById('C1R28Q');  
+const input29 = document.getElementById('C1R29Q');  
+const input30 = document.getElementById('C1R30Q');  
+const input31 = document.getElementById('C1R31Q');  
+const input32 = document.getElementById('C1R32Q');  
+const input33 = document.getElementById('C1R33Q');  
+const input34 = document.getElementById('C1R34Q');  
+const input35 = document.getElementById('C1R35Q');   
+const input36 = document.getElementById('C1R36Q');  
+      
+const cardBud = document.querySelector('.container .card1 .face.face1');
+var copiedInputValue = localStorage.getItem('copiedInputValue');
+var incrementButton = document.getElementById("slot 1");
+var priceElement = document.getElementById("price");
+var value = copiedInputValue;
+var priceText = priceElement.textContent;
+var numericText = priceText.replace(/[^0-9]/g, '');
+var price = parseFloat(numericText);
+var pElement = document.createElement('p');
+let priceStorage = copiedInputValue;
+var initialPay = 0; // Store the initial pay value
+var pay = initialPay; // Initialize pay with the initial value
+let chang = priceStorage - pay;
+  
+// Store the previous input values
+var prevInput1Value = "";
+var prevInput2Value = "";
+var prevInput3Value = "";
+var prevInput4Value = "";
+var prevInput5Value = ""; 
+var prevInput6Value = ""; 
+var prevInput7Value = ""; 
+var prevInput8Value = ""; 
+var prevInput9Value = ""; 
+var prevInput10Value = ""; 
+var prevInput11Value = ""; 
+var prevInput12Value = ""; 
+var prevInput13Value = ""; 
+var prevInput14Value = ""; 
+var prevInput15Value = ""; 
+var prevInput16Value = ""; 
+var prevInput17Value = ""; 
+var prevInput18Value = ""; 
+var prevInput19Value = ""; 
+var prevInput20Value = ""; 
+var prevInput21Value = ""; 
+var prevInput22Value = ""; 
+var prevInput23Value = ""; 
+var prevInput24Value = ""; 
+var prevInput25Value = ""; 
+var prevInput26Value = ""; 
+var prevInput27Value = ""; 
+var prevInput28Value = ""; 
+var prevInput29Value = ""; 
+var prevInput30Value = ""; 
+var prevInput31Value = ""; 
+var prevInput32Value = ""; 
+var prevInput33Value = ""; 
+var prevInput34Value = ""; 
+var prevInput35Value = ""; 
+var prevInput36Value = ""; 
+  
+      
+  
+  
+// Function to add commas to the number
+function addCommas(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+  
+// Paste the input value as a <p> element
+var pasteLocation = document.getElementById('budgetValue');
+  
+if (copiedInputValue && pasteLocation) {
+  pElement.innerHTML = addCommas("&#x20B1; " + copiedInputValue + " <br>Total budget");
+// Add the Peso sign and commas to the copied value
+  pasteLocation.appendChild(pElement);
+}
+      
+function WARNING() {
+  if(chang<0){cardBud.style.background="#EF5350";}
+    else{cardBud.style.background="#c7ab91";}
+}
+
+
+const sidebarList = document.getElementById('itemList');
+const items = [
+  { name: 'Nan Optipro 3 (12-36 months) 1.3kg', quantity: 0, price: 1080.50 },
+  { name: 'Bioderm Soap WHT 135g', quantity: 0, price: 40.00 },
+  { name: 'Haw Haw Milk Candy (40PCS)', quantity: 0, price: 31.00 },
+  { name: 'Swiss Miss Creamy Choco Mallows 260g', quantity: 0, price: 148.50 },
+  { name: 'Irish Spring Deodorant Soap (Original) 3.07oz', quantity: 0, price: 66.00},
+  { name: 'Champi Candy Choco (50PCS)', quantity: 0, price: 36.05 },
+  { name: 'Enfamil A+ Nura Pro 350g', quantity: 0, price: 677.75 },
+  { name: 'Safeguard Bar Soap Arctic Fresh 115g', quantity: 0, price: 46.00 },
+  { name: 'Fres Candy Barley Mint 3g (50pcs)', quantity: 0, price:  35.50},
+  { name: 'Spam Luncheon Meat 12oz 340g', quantity: 0, price: 200.00 },
+  { name: "Johnson's Bath Milk R 500ml", quantity: 0, price: 293.50 },
+  { name: 'Green Cross Alcohol 250ml', quantity: 0, price:  52.00 },
+  { name: 'PH Care C/W 50ml ', quantity: 0, price: 53.00 },
+  { name: 'Superstix Chocolate Junior 330g', quantity: 0, price: 73.00 },
+  { name: ' Pocari Sweat 350ml', quantity: 0, price: 35.00 },
+  { name: "Best Food's Sandwich Spread 80ml", quantity: 0, price:  27.00},
+  { name: 'Master Sardines Red In Tomato Saunce 155g ', quantity: 0, price: 22.75},
+  { name: 'Lactum (6-12 months) Plain 350G ', quantity: 0, price: 255.00 },
+  { name: "Nestle Chuckie Baon Saver's Pack 110ml x 10 ", quantity: 0, price: 84.25 },
+  { name: 'Tulip Pork Lunch Meat 340g ', quantity: 0, price: 108.00 },
+  { name: 'Baby Dove Hair to Toe Wash Refill Sensitive moisture 220ml ', quantity: 0, price: 218.50},
+  { name: 'Alcoplus Alcohol 70% Solution Isopropyl 250ml ', quantity: 0, price: 50.75 },
+  { name: 'Lactacyd Feminine Wash Odor Block 60ml ', quantity: 0, price: 74.60 },
+  { name: 'Wafertime Rich Cream (10PCS) ', quantity: 0, price: 61.00},
+  { name: 'Absolute Pure Distilled Drinking Water 1L ', quantity: 0, price: 24.65 },
+  { name: 'Cheez Whiz Spread Mild Pouch 60g ', quantity: 0, price:  33.00 },
+  { name: 'Mega Sardines In Tomato Sauce 155g ', quantity: 0, price: 22.50},
+  { name: 'Milo 1.2kg ', quantity: 0, price: 288.75 },
+  { name: 'CDO Luncheon Meat Chinese Style 350g ', quantity: 0, price: 85.35},
+  { name: 'BabyFlo Oatmeal Bath 200ml ', quantity: 0, price:  99.50},
+  { name: 'Casino Active Alcohol Ethyl 250ml ', quantity: 0, price: 50.25},
+  { name: 'Betadine Feminine Wash 7.5 Solution Antiseptic 25ml ', quantity: 0, price: 71.05 },
+  { name: 'Frootees Strawberry (10PCS) ', quantity: 0, price:  51.00},
+  { name: 'Nature Spring Distilled Drinking Water 1L ', quantity: 0, price: 20.00},
+  { name: "Lady's Choice Ham 80ml ", quantity: 0, price: 33.00},
+  { name: '555 Spanish Sardines 155g  ', quantity: 0, price: 31.50},
+];
+
+function updateSidebar(index, quantity) {
+  const item = items[index - 1]; 
+  item.quantity = quantity; 
+
+
+  sidebarList.innerHTML = '';
+
+  for (let i = 0; i < items.length; i++) {
+    const currentItem = items[i];
+
+    if (currentItem.quantity > 0) {
+      const listItem = document.createElement("li");
+      listItem.classList.add("item");
+
+      const nameElement = document.createElement("span");
+      nameElement.classList.add("item-name");
+      nameElement.textContent = currentItem.name;
+
+      const quantityElement = document.createElement("span");
+      quantityElement.classList.add("item-quantity");
+      quantityElement.textContent = currentItem.quantity;
+
+      listItem.appendChild(nameElement);
+
+      const spaceElement = document.createElement("span");
+      spaceElement.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"; // Add multiple spaces between name and quantity
+
+      listItem.appendChild(spaceElement);
+      listItem.appendChild(quantityElement);
+
+      sidebarList.appendChild(listItem);
+    }
+  }
+
+  updateTotalPrice();
+}
+
+
+
+function handleInput1() {
+   let currentValue = input1.value;
+    if(currentValue<0){
+      currentValue =0;
+    }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 1080.50;
+  
+    // Subtract the previous input value from pay
+    if (prevInput1Value !== "") {
+      pay -= prevInput1Value * price;
+    }
+  
+    // Update the previous input value
+    prevInput1Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(1, currentValue);
+  }
+
+  function handleInput2() {
+    let currentValue = input2.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 40.00;
+  
+    // Subtract the previous input1 value from pay
+    if (prevInput2Value !== "") {
+      pay -= prevInput2Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput2Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+     valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+      WARNING();
+      updateSidebar(2, currentValue);
+  }
+  function handleInput3() {
+    let currentValue = input3.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 31.00;
+     
+    // Subtract the previous input1 value from pay
+    if (prevInput3Value !== "") {
+      pay -= prevInput3Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput3Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+     valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Renaining Balance ");
+  WARNING();
+  updateSidebar(3, currentValue);
+  }
+  function handleInput4() {
+    let currentValue = input4.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 148.50;
+  
+    // Subtract the previous input1 value from pay
+    if (prevInput4Value !== "") {
+      pay -= prevInput4Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput4Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+     valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(4, currentValue);
+}
+  function handleInput5() {
+    let currentValue = input5.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 66.00;
+  
+    // Subtract the previous input1 value from pay
+    if (prevInput5Value !== "") {
+      pay -= prevInput5Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput5Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+     valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(5, currentValue)}
+  function handleInput6() {
+    let currentValue = input6.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 36.05;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput6Value !== "") {
+      pay -= prevInput6Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput6Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+      valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(6, currentValue)}
+  function handleInput7() {
+    let currentValue = input7.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 677.75;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput7Value !== "") {
+      pay -= prevInput7Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput7Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+      valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(7, currentValue);
+}
+  function handleInput8() {
+    let currentValue = input8.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 46.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput8Value !== "") {
+      pay -= prevInput8Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput8Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+     valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(8, currentValue)}
+  function handleInput9() {
+    let currentValue = input9.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 35.50;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput9Value !== "") {
+      pay -= prevInput9Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput9Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(9, currentValue)}    
+  function handleInput10() {
+    let currentValue = input10.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 200.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput10Value !== "") {
+      pay -= prevInput10Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput10Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(10, currentValue)}
+  function handleInput11() {
+    let currentValue = input11.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 293.50;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput11Value !== "") {
+      pay -= prevInput11Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput11Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(11, currentValue)}
+
+  function handleInput12() {
+    let currentValue = input12.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 52.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput12Value !== "") {
+      pay -= prevInput12Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput12Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(12, currentValue)}
+
+  function handleInput13() {
+    let currentValue = input13.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 53.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput13Value !== "") {
+      pay -= prevInput13Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput13Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(13, currentValue)}
+
+  function handleInput14() {
+    let currentValue = input14.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 73.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput14Value !== "") {
+      pay -= prevInput14Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput14Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(14, currentValue)}
+
+  function handleInput15() {
+    let currentValue = input15.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 35.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput15Value !== "") {
+      pay -= prevInput15Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput15Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING()
+  updateSidebar(15, currentValue)}
+
+  function handleInput16() {
+    let currentValue = input16.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 27.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput16Value !== "") {
+      pay -= prevInput16Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput16Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(16, currentValue)}
+
+  function handleInput17() {
+    let currentValue = input17.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 22.75;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput17Value !== "") {
+      pay -= prevInput17Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput17Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(17, currentValue)}
+
+  function handleInput18() {
+    let currentValue = input18.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 255.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput18Value !== "") {
+      pay -= prevInput18Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput18Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(18, currentValue)}
+
+  function handleInput19() {
+    let currentValue = input19.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 84.25;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput19Value !== "") {
+      pay -= prevInput19Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput19Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(19, currentValue)}
+
+  function handleInput20() {
+    let currentValue = input20.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 108.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput20Value !== "") {
+      pay -= prevInput20Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput20Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(20, currentValue)}
+
+  function handleInput21() {
+    let currentValue = input21.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 218.50;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput21Value !== "") {
+      pay -= prevInput21Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput21Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(21, currentValue)}
+
+  function handleInput22() {
+    let currentValue = input22.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 50.75;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput22Value !== "") {
+      pay -= prevInput22Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput22Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(22, currentValue)}
+
+  function handleInput23() {
+    let currentValue = input23.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 74.60;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput23Value !== "") {
+      pay -= prevInput23Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput23Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(23, currentValue)}
+
+  function handleInput24() {
+    let currentValue = input24.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 61.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput24Value !== "") {
+      pay -= prevInput24Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput24Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(24, currentValue)}
+
+  function handleInput25() {
+    let currentValue = input25.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 24.65;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput25Value !== "") {
+      pay -= prevInput25Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput25Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(25, currentValue)}
+
+  function handleInput26() {
+    let currentValue = input26.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 33.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput26Value !== "") {
+      pay -= prevInput26Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput26Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(26, currentValue)}
+
+  function handleInput27() {
+    let currentValue = input27.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 22.50;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput27Value !== "") {
+      pay -= prevInput27Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput27Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(27, currentValue)}
+
+  function handleInput28() {
+    let currentValue = input28.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 288.75;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput28Value !== "") {
+      pay -= prevInput28Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput28Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(28, currentValue)}
+
+  function handleInput29() {
+    let currentValue = input29.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 85.35;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput29Value !== "") {
+      pay -= prevInput29Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput29Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(29, currentValue)}
+
+  function handleInput30() {
+    let currentValue = input30.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 99.50;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput30Value !== "") {
+      pay -= prevInput30Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput30Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(30, currentValue)}
+
+  function handleInput31() {
+    let currentValue = input31.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 50.25;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput31Value !== "") {
+      pay -= prevInput31Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput31Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(31, currentValue)}
+  
+  function handleInput32() {
+    let currentValue = input32.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 71.05 ;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput32Value !== "") {
+      pay -= prevInput32Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput32Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(32, currentValue)}
+
+  function handleInput33() {
+    let currentValue = input33.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 51.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput33Value !== "") {
+      pay -= prevInput33Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput33Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(33, currentValue)}
+
+  function handleInput34() {
+    let currentValue = input34.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 20.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput34Value !== "") {
+      pay -= prevInput34Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput34Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(34, currentValue)}
+
+  function handleInput35() {
+    let currentValue = input35.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 33.00;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput35Value !== "") {
+      pay -= prevInput35Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput35Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance ");
+  WARNING();
+  updateSidebar(35, currentValue)}
+ 
+  function handleInput36() {
+    let currentValue = input36.value;
+     if(currentValue<0){
+          currentValue =0;
+      }
+    var valueElement = document.getElementById("budgetChange");
+    let price = 31.50;
+  
+    // Subtract the previous input6 value from pay
+    if (prevInput36Value !== "") {
+      pay -= prevInput36Value * price;
+    }
+  
+    // Update the previous input1 value
+    prevInput36Value = currentValue;
+  
+    if (currentValue === "" || currentValue === "0") {
+      pay -= initialPay; // Restore the initial pay value
+    } else {
+      pay += currentValue * price;
+    }
+  
+    chang = priceStorage - pay;
+  
+    valueElement.innerHTML = addCommas("&#x20B1;" + pay + " <br>Total Price<br><br> &#x20B1;" + chang + "<br>Remaining Balance");
+  WARNING();
+  updateSidebar(36, currentValue)}
+
+  // Attach the event handlers to the inputs
+  input1.addEventListener('input', handleInput1);
+  input2.addEventListener('input', handleInput2);
+  input3.addEventListener('input', handleInput3);
+  input4.addEventListener('input', handleInput4);
+  input5.addEventListener('input', handleInput5);
+  input6.addEventListener('input', handleInput6);
+  input7.addEventListener('input', handleInput7);
+  input8.addEventListener('input', handleInput8);
+  input9.addEventListener('input', handleInput9);
+  input10.addEventListener('input', handleInput10);
+  input11.addEventListener('input', handleInput11);
+  input12.addEventListener('input', handleInput12);
+  input13.addEventListener('input', handleInput13);
+  input14.addEventListener('input', handleInput14);
+  input15.addEventListener('input', handleInput15);
+  input16.addEventListener('input', handleInput16);
+  input17.addEventListener('input', handleInput17);
+  input18.addEventListener('input', handleInput18);
+  input19.addEventListener('input', handleInput19);
+  input20.addEventListener('input', handleInput20);
+  input21.addEventListener('input', handleInput21);
+  input22.addEventListener('input', handleInput22);
+  input23.addEventListener('input', handleInput23);
+  input24.addEventListener('input', handleInput24);
+  input25.addEventListener('input', handleInput25);
+  input26.addEventListener('input', handleInput26);
+  input27.addEventListener('input', handleInput27);
+  input28.addEventListener('input', handleInput28);
+  input29.addEventListener('input', handleInput29);
+  input30.addEventListener('input', handleInput30);
+  input31.addEventListener('input', handleInput31);
+  input32.addEventListener('input', handleInput32);
+  input33.addEventListener('input', handleInput33);
+  input34.addEventListener('input', handleInput34);
+  input35.addEventListener('input', handleInput35);
+  input36.addEventListener('input', handleInput36);
+
+  function updateDateTime() {
+    var currentDateTimeElement = document.getElementById("currentDateTime");
+    var currentDateTime = new Date();
+  
+    var date = currentDateTime.toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
+  
+    var hours = currentDateTime.getHours();
+    var minutes = currentDateTime.getMinutes();
+    var seconds = currentDateTime.getSeconds();
+  
+    var amOrPm = hours >= 12 ? "PM" : "AM";
+  
+    // Convert to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+  
+    // Add leading zeros if necessary
+    hours = (hours < 10 ? "0" : "") + hours;
+    minutes = (minutes < 10 ? "0" : "") + minutes;
+    seconds = (seconds < 10 ? "0" : "") + seconds;
+  
+    // Format the time and date as desired
+    var formattedDateTime = date + " " + hours + ":" + minutes + ":" + seconds + " " + amOrPm;
+  
+    // Update the text content of the element
+    currentDateTimeElement.textContent = formattedDateTime;
+  WARNING();}
+  
+  // Update the date and time every second
+  setInterval(updateDateTime, 1000);
+  
+  // Trigger the function when the website is loaded
+  window.addEventListener('load', convertPriceToInt);
+  
+  
+   
+  //SEARCH
+  function showTopClass() {
+    var cardBoxes = document.getElementsByClassName("card_box");
+    
+    for (var i = 0; i < cardBoxes.length; i++) {
+      cardBoxes[i].style.display = "block";
+    }
+    
+    var cardBox1 = document.getElementsByClassName("card_box2");
+    var cardBox2 = document.getElementsByClassName("card_box3");
+    
+    for (var j = 0; j < cardBox1.length; j++) {
+      cardBox1[j].style.display = "none";
+    }
+    
+    for (var k = 0; k < cardBox2.length; k++) {
+      cardBox2[k].style.display = "none";
+    }
+    
+    var budgetCols = document.getElementsByClassName("budgetCol");
+    
+    for (var l = 0; l < budgetCols.length; l++) {
+      budgetCols[l].style.marginTop = "700px";
+    }
+    
+    var nameHeaders = document.getElementById("NAME");
+    
+    if (nameHeaders) {
+      nameHeaders.style.marginTop = "-970px";
+    }
+  }
+  
+  function showTopClass1() {
+    var cardBoxes = document.getElementsByClassName("card_box");
+    
+    for (var i = 0; i < cardBoxes.length; i++) {
+      cardBoxes[i].style.display = "none";
+    }
+    
+    var cardBox1 = document.getElementsByClassName("card_box2");
+    var cardBox2 = document.getElementsByClassName("card_box3");
+    
+    for (var j = 0; j < cardBox1.length; j++) {
+      cardBox1[j].style.display = "block";
+    }
+    
+    for (var k = 0; k < cardBox2.length; k++) {
+      cardBox2[k].style.display = "none";
+    }
+    
+    var budgetCols = document.getElementsByClassName("budgetCol");
+    
+    for (var l = 0; l < budgetCols.length; l++) {
+      budgetCols[l].style.marginTop = "700px";
+    }
+    
+    var nameHeaders = document.getElementById("NAME");
+    
+    if (nameHeaders) {
+      nameHeaders.style.marginTop = "-970px";
+    }
+  }
+  
+  function showTopClass2() {
+    var cardBoxes = document.getElementsByClassName("card_box");
+    
+    for (var i = 0; i < cardBoxes.length; i++) {
+      cardBoxes[i].style.display = "none";
+    }
+    
+    var cardBox1 = document.getElementsByClassName("card_box2");
+    var cardBox2 = document.getElementsByClassName("card_box3");
+    
+    for (var j = 0; j < cardBox1.length; j++) {
+      cardBox1[j].style.display = "none";
+    }
+    
+    for (var k = 0; k < cardBox2.length; k++) {
+      cardBox2[k].style.display = "block";
+    }
+    
+    var budgetCols = document.getElementsByClassName("budgetCol");
+    
+    for (var l = 0; l < budgetCols.length; l++) {
+      budgetCols[l].style.marginTop = "700px";
+    }
+    
+    var nameHeaders = document.getElementById("NAME");
+    
+    if (nameHeaders) {
+      nameHeaders.style.marginTop = "-970px";
+    }
+  }
+  
+  
+  function showALL() {
+    var cardBoxes = document.getElementsByClassName("card_box");
+    for (var i = 0; i < cardBoxes.length; i++) {
+      cardBoxes[i].style.display = "block";
+    }
+  
+    var cardBox1 = document.getElementsByClassName("card_box3");
+    for (var i = 0; i < cardBox1.length; i++) {
+      cardBox1[i].style.display = "block";
+    }
+  
+    var cardBox2 = document.getElementsByClassName("card_box2");
+    for (var i = 0; i < cardBox2.length; i++) {
+      cardBox2[i].style.display = "block";
+    }
+  
+    var budgetCols = document.getElementsByClassName("budgetCol");
+    for (var i = 0; i < budgetCols.length; i++) {
+      budgetCols[i].style.display = "block";
+      budgetCols[i].style.marginTop = "-3050px"; // Adjust the margin as per your requirement
+    }
+  
+     var nameHeaders = document.getElementById("NAME");
+    
+    if (nameHeaders) {
+       nameHeaders.style.display = "block";
+      nameHeaders.style.marginTop = "-2850px";
+    }
+    }
+  
+  
+</script>
+</body>
+</html>
